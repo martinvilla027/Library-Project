@@ -1,0 +1,71 @@
+<div class="row father">
+    <div class="col-md-12">
+        <div style="text-align:center">
+            <h4>Create Booking</h4>
+            <img width="150" alt="Booking Logo" src="/assets/images/books.png">
+            <br>
+        </div>
+        <br>
+        <div class="offset-md-3 col-md-6">
+            <h5>Please fill all information to create a booking</h5>
+            <br>
+            <form>
+                <div class="form-group">
+                    <label for="InputDocument">Document</label>
+                    <input required type="text" class="form-control" id="InputDocument" placeholder="Enter document"
+                        [(ngModel)]="InputDocument" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="DateOfBooking">Date Of Booking</label>
+                    <input required type="date" class="form-control" id="DateOfBooking" [(ngModel)]="DateOfBooking"
+                        [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="DateOfReturn">Date Of Return</label>
+                    <input required type="date" class="form-control" id="DateOfReturn" [(ngModel)]="DateOfReturn"
+                        [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="CbBooks">Available Books</label>
+                    <select required class="form-control" id="CbBooks" [(ngModel)]="CbBooks"
+                        [ngModelOptions]="{standalone: true}">
+                        <option *ngFor="let option of booksList" value="{{option.Book_Id}}">
+                            {{option.Book_Name}}</option>
+                    </select>
+                </div>
+            </form>
+            <br>
+            <div class="form-group button1">
+                <div class="col-xs-12">
+                    <div class="col-xs-12">
+                        <br>
+                        <button class="button" type="submit" class="btn btn-primary" (click)='insertBooking()'>Create
+                            booking</button>
+                        <label class="divider"></label>
+                        <button class="button" type="button" class="btn btn-primary"
+                            [routerLink]="['/menu']">Cancel</button>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="poppup son" *ngIf="showConfirmPopUp" tabindex="-1" role="dialog">
+        <div class="modal-dialog sonPosition" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{ popUpTittleMessage }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hidePopup()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>{{ popUpMessage }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" (click)="return()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

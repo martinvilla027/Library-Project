@@ -1,0 +1,92 @@
+<div class="row father">
+    <div class="col-md-12">
+        <div style="text-align:center">
+            <h4>Create User</h4>
+            <img width="150" alt="Users Logo" src="/assets/images/group.png">
+            <br>
+        </div>
+        <br>
+        <div class="offset-md-3 col-md-6">
+            <h5>Please fill all information to create an user</h5>
+            <br>
+            <form>
+                <div class="form-group">
+                    <label for="InputDocument">Document</label>
+                    <input required type="text" class="form-control" id="InputDocument" placeholder="Enter document"
+                        [(ngModel)]="InputDocument" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="InputName">Name</label>
+                    <input required type="text" class="form-control" id="InputName" placeholder="Enter name"
+                        [(ngModel)]="InputName" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="InputLastName">Last Name</label>
+                    <input required type="text" class="form-control" id="InputLastName" placeholder="Enter last name"
+                        [(ngModel)]="InputLastName" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="InputPhone">Phone Number</label>
+                    <input required type="number" class="form-control" id="InputPhone" placeholder="Enter phone number"
+                        [(ngModel)]="InputPhone" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="InputCellphone">Cell Phone Number</label>
+                    <input required type="number" class="form-control" id="InputCellphone"
+                        placeholder="Enter cell phone number" [(ngModel)]="InputCellphone"
+                        [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="InputAddress">Address</label>
+                    <input required type="text" class="form-control" id="InputAddress" placeholder="Enter address"
+                        [(ngModel)]="InputAddress" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label for="CbCountries">Country Of Birth</label>
+                    <select required class="form-control" id="CbCountries" [(ngModel)]="CbCountries"
+                        [ngModelOptions]="{standalone: true}">
+                        <option *ngFor="let option of countryList" value="{{option.name}}">
+                            {{option.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="DateOfBirth">Date Of Birth</label>
+                    <input required type="date" class="form-control" id="DateOfBirth" [(ngModel)]="DateOfBirth"
+                        [ngModelOptions]="{standalone: true}">
+                </div>
+            </form>
+            <br>
+            <div class="form-group button1">
+                <div class="col-xs-12">
+                    <div class="col-xs-12">
+                        <br>
+                        <button class="button" type="submit" class="btn btn-primary" (click)='insertUser()'>Create User</button>
+                        <label class="divider"></label>
+                        <button class="button" type="button" class="btn btn-primary"
+                            [routerLink]="['/menu']">Cancel</button>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="poppup son" *ngIf="showConfirmPopUp" tabindex="-1" role="dialog">
+        <div class="modal-dialog sonPosition" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{ popUpTittleMessage }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hidePopup()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>{{ popUpMessage }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" (click)="return()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

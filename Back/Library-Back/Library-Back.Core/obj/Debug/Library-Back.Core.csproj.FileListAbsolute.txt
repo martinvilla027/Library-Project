@@ -1,0 +1,9 @@
+C:\Users\martin.villa\Downloads\Diplomado\Trabajo Final\Parte 2\Back\Library-Back\Library-Back.Core\bin\Debug\Library-Back.Core.dll
+C:\Users\martin.villa\Downloads\Diplomado\Trabajo Final\Parte 2\Back\Library-Back\Library-Back.Core\bin\Debug\Library-Back.Core.pdb
+C:\Users\martin.villa\Downloads\Diplomado\Trabajo Final\Parte 2\Back\Library-Back\Library-Back.Core\bin\Debug\Dapper.dll
+C:\Users\martin.villa\Downloads\Diplomado\Trabajo Final\Parte 2\Back\Library-Back\Library-Back.Core\bin\Debug\Dapper.xml
+C:\Users\martin.villa\Downloads\Diplomado\Trabajo Final\Parte 2\Back\Library-Back\Library-Back.Core\obj\Debug\Library-Back.Core.csprojAssemblyReference.cache
+C:\Users\martin.villa\Downloads\Diplomado\Trabajo Final\Parte 2\Back\Library-Back\Library-Back.Core\obj\Debug\Library-Back.Core.csproj.CoreCompileInputs.cache
+C:\Users\martin.villa\Downloads\Diplomado\Trabajo Final\Parte 2\Back\Library-Back\Library-Back.Core\obj\Debug\Library-Back.Core.csproj.CopyComplete
+C:\Users\martin.villa\Downloads\Diplomado\Trabajo Final\Parte 2\Back\Library-Back\Library-Back.Core\obj\Debug\Library-Back.Core.dll
+C:\Users\martin.villa\Downloads\Diplomado\Trabajo Final\Parte 2\Back\Library-Back\Library-Back.Core\obj\Debug\Library-Back.Core.pdb
